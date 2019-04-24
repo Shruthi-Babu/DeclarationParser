@@ -21,7 +21,6 @@ public class Parser_modified
 		for (int j = 0; j < arrSplit.length-1 ; j++)
 		{
 			dec = arrSplit[j];
-			//System.out.println(dec+" "+(j+1));
 			if (dec.equals(""))
 
 			{
