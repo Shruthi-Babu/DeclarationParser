@@ -114,12 +114,13 @@ public class Parser_modified
 		}
 	}
 
+
 	public static void isStringDouble(String value) 
 	{
 		try {
 			Double.parseDouble(value);
 		} catch (NumberFormatException e) {
-			System.out.println("Type mismatch.");
+			System.out.println("Type mismatch");
 			c++;
 		}
 
