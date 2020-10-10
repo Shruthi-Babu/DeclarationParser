@@ -29,24 +29,26 @@ public class Parser
 				c++;
 			}
 			else
+			{
 				parse(t);
+			}				
 		}
 	
 		System.out.println("\nParsing complete. \nNumber of errors: "+c);
 	}
 	
 	public final static boolean isValidJavaIdentifier(String str)
-	  {
+	{
 		if (!((str.charAt(0) >= 'a' && str.charAt(0) <= 'z')  || (str.charAt(0) >= 'A' && str.charAt(0) <= 'Z') || str.charAt(0) == '_')) 
-		        return false; 		  
-		    
+			return false; 		  
+
 		for (int i = 1; i < str.length(); i++)
 		{ 
 			if (!((str.charAt(i) >= 'a' && str.charAt(i) <= 'z')|| (str.charAt(i) >= 'A' && str.charAt(i) <= 'Z')  || (str.charAt(i) >= '0' && str.charAt(i) <= '9') || str.charAt(i)== '_')) 
 				return false; 
 		} 		   
-	    return true; 	     
-	  }
+		return true; 	     
+	}
 	
 	private static void parse(String id)
 	{
@@ -65,7 +67,6 @@ public class Parser
 				c++;
 			}
 		}
-		//System.out.println(id);
 		boolean isID= isValidJavaIdentifier(id);
 		if(!isID)
 		{
